@@ -1,0 +1,17 @@
+textarea{
+    caret-color: red;
+    font-size: 18px;
+    width: 87%;
+    border: 1px solid rgb(149, 145, 145);
+    height: 100%;
+    outline: none;
+    background-color: #111111;
+    color: white;
+}
+body{
+    background-color: #111111;
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.526);
+}
+
