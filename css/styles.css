@@ -1,17 +1,104 @@
+/* common */
 textarea{
-    caret-color: red;
     font-size: 18px;
     width: 87%;
     border: 1px solid rgb(149, 145, 145);
     height: 100%;
     outline: none;
+    caret-color: red;
+    transition: background 0.2s linear;
+}
+body{
+    transition: background 0.2s linear;
+}
+nav{
+    transition: background 0.2s linear;
+}
+.nav-link:hover{
+    color: #ffffff;
+}
+
+
+/* light theme */
+
+textarea{
+    background-color: #fff;
+    color: #000;
+}
+body{
+    background-color: #fff;
+}
+nav{
+    background-color: #78b5e0;
+}
+.nav-link{
+    color: #000;
+}
+/* dark theme */
+
+textarea.dark{
+    caret-color: red;
     background-color: #111111;
     color: white;
 }
-body{
+body.dark{
     background-color: #111111;
 }
-::placeholder{
+::placeholder.dark{
     color: rgba(255, 255, 255, 0.526);
 }
+nav.dark{
+    background-color: #1b222d;
+}
+.nav-link.dark{
+    color: white;
+}
+.nav-link.dark:hover{
+    color: #a04abf;
+}
+/* toggle */
 
+#checkbox{
+    display: none;
+}
+
+.toggler{
+    display: block;
+    width: 60px;
+    height: 31px;
+    border: 2px solid #4672fe;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.ball, .sun, .moon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ball {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #4672fe;
+    border-radius: 50%;
+    left: 1px;
+    z-index: 10;
+    transition: transform 0.5s ease-in-out;
+}
+.moon{
+    left: 5px;
+}
+.sun{
+    right: 5px;
+}
+#checkbox:checked + .ball{
+    transform: translate(29px, -50%);
+}
+
+/* utilies */
+
+#first-link{
+    padding-left: 900px;
+}
