@@ -8,8 +8,8 @@ document.getElementById("note").placeholder = "Welcome to Notepad!\n \n Features
 
 
 // theme toggler
-function change() {
-    var checkbox = document.getElementById('checkbox');
+var checkbox = document.getElementById("checkbox");
+checkbox.addEventListener('change',() => {
     var text = document.getElementById('note');
     var nav = document.getElementById('nav');
     var navlink1 = document.getElementById('navlink1');
@@ -23,7 +23,7 @@ function change() {
     navlink2.classList.toggle('dark');
     navlink3.classList.toggle('dark');
 
-}
+});
 
 // copy to clipboard
 function copy() {
@@ -36,4 +36,16 @@ function copy() {
         document.execCommand("copy");
         alert("Copied the text to clipboard!");
     }
+}
+
+// local storage
+setInterval(() => {
+    localStorage.setItem("note", document.getElementById("note").value);
+}, 1000);
+
+if (localStorage.getItem("note") != "") {
+    document.getElementById("note").value = localStorage.getItem("note");
+}
+else{
+    document.getElementById("note").value = "";
 }
