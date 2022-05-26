@@ -7,31 +7,36 @@ textarea{
     outline: none;
     caret-color: red;
     transition: background 0.2s linear;
+    background-color: #fff;
+    color: #000;
 }
 body{
     transition: background 0.2s linear;
+    background-color: #fff;
 }
 nav{
     transition: background 0.2s linear;
+    background-color: #78b5e0;
 }
 .nav-link:hover{
     color: #ffffff;
+    color: #000;
 }
 
 
 /* light theme */
 
-textarea{
+textarea + textarea.light{
     background-color: #fff;
     color: #000;
 }
-body{
+body + body.light{
     background-color: #fff;
 }
-nav{
+nav + nav.light{
     background-color: #78b5e0;
 }
-.nav-link{
+.nav-link + .nav-link.light{
     color: #000;
 }
 /* dark theme */
@@ -101,4 +106,10 @@ nav.dark{
 
 #first-link{
     padding-left: 900px;
+}
+
+@media screen and (max-width: 768px){
+    #first-link{
+        padding-left: 0px;
+    }
 }
