@@ -4,7 +4,7 @@ document.getElementById("note").placeholder = "Welcome to Notepad!\n \n Features
 var textarea = document.getElementById("note");
 textarea.addEventListener('click', () => {
     var z = "Start typing here...";
-    this.document.getElementById("note").placeholder = z;
+    document.getElementById("note").placeholder = z;
 })
 
 // theme toggler
