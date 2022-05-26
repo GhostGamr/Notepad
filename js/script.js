@@ -115,4 +115,3 @@ download.addEventListener('click',() => {
     var filename = "note.txt";
     download(filename, text);
 });
-=
