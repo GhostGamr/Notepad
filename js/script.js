@@ -95,6 +95,7 @@ else{
 }
 
 //download
+// broke- read doc again
 
 function download(filename, textinput) {
     var text = document.getElementById("note").value;
