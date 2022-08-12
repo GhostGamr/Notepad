@@ -23,6 +23,15 @@ nav{
     color: #000;
 }
 
+#font_select{
+    border-radius: 5px;
+    position: relative;
+    top: 8px;
+    outline: invert;
+    background-color: #78b5e0;
+    color: #000;
+}
+
 
 /* light theme */
 
@@ -37,6 +46,11 @@ nav + nav.light{
     background-color: #78b5e0;
 }
 .nav-link + .nav-link.light{
+    color: #000;
+}
+
+#font_select{
+    background-color: #4672fe;
     color: #000;
 }
 /* dark theme */
@@ -61,6 +75,11 @@ nav.dark{
 .nav-link.dark:hover{
     color: #a04abf;
 }
+
+#font_select.dark{
+    background-color: #1b222d;
+    color: white;
+}
 /* toggle */
 
 #checkbox{
@@ -76,6 +95,7 @@ nav.dark{
     position: relative;
     cursor: pointer;
     margin-left: 10px;
+    color: #fff;
 }
 .ball, .sun, .moon{
     position: absolute;

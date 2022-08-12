@@ -29,6 +29,7 @@ checkbox.addEventListener('change', () => {
     var navlink1 = document.getElementById('navlink1');
     var navlink2 = document.getElementById('navlink2');
     var navlink3 = document.getElementById('navlink3');
+    var font_select = document.getElementById('font_select');
 
     document.body.classList.toggle('dark');
     note.classList.toggle('dark');
@@ -36,6 +37,7 @@ checkbox.addEventListener('change', () => {
     navlink1.classList.toggle('dark');
     navlink2.classList.toggle('dark');
     navlink3.classList.toggle('dark');
+    font_select.classList.toggle('dark');
 });
 
 
@@ -45,6 +47,7 @@ function dark() {
     var navlink1 = document.getElementById('navlink1');
     var navlink2 = document.getElementById('navlink2');
     var navlink3 = document.getElementById('navlink3');
+    var font_select = document.getElementById('font_select');
 
     document.body.classList.toggle('dark');
     note.classList.toggle('dark');
@@ -52,6 +55,7 @@ function dark() {
     navlink1.classList.toggle('dark');
     navlink2.classList.toggle('dark');
     navlink3.classList.toggle('dark');
+    font_select.classList.toggle('dark');
 }
 
 function light() {
@@ -60,6 +64,7 @@ function light() {
     var navlink1 = document.getElementById('navlink1');
     var navlink2 = document.getElementById('navlink2');
     var navlink3 = document.getElementById('navlink3');
+    var font_select = document.getElementById('font_select');
 
     document.body.classList.toggle('light');
     note.classList.toggle('light');
@@ -67,6 +72,7 @@ function light() {
     navlink1.classList.toggle('light');
     navlink2.classList.toggle('light');
     navlink3.classList.toggle('light');
+    font_select.classList.toggle('light');
 }
 
 // copy to clipboard
@@ -115,3 +121,28 @@ download.addEventListener('click',() => {
     var filename = "note.txt";
     download(filename, text);
 });
+
+
+// font dropdown 
+
+var font_select = document.getElementById("font_select");
+
+const text = document.getElementById("note");
+
+font_select.addEventListener('change', () => {
+    text.style.fontFamily = font_select.value;
+    localStorage.setItem("font", font_select.value);
+});
+
+if (localStorage.getItem("font") != "") {
+    font_select.value = localStorage.getItem("font");
+    text.style.fontFamily = font_select.value;
+}
+
+         
+
+// setInterval(() => {
+    
+// }, 0);
+
+
